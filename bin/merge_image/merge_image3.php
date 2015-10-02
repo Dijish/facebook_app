@@ -3,9 +3,9 @@ $img_dest = imagecreatefrompng('test_cover1.png');
 $img_src_or = imagecreatefromjpeg('test_profile_picture1.jpg');
 $width=500;
 $height=250;
+$to_crop_array = array('x' =>300 , 'y' => 0, 'width' => 500, 'height'=> 250);
+$thumb_im = imagecrop($im, $to_crop_array);
 $img_src_resize = imagecreatetruecolor( $width, $height );
-imagealphablending( $img_src_resize, false );
-imagesavealpha( $img_src_resize, true );
 imagecopyresampled( $img_src_resize, $img_src_or, //dst_image, src_image
                     250, 0, //Coordenada x del punto de destino, Coordenada y del punto de destino
                     0, 0, //Coordenada x del punto de origen, Coordenada y del punto de origen
