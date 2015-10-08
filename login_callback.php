@@ -44,10 +44,10 @@ if (isset($accessToken)) {
     exit;
   }
 
-  echo 'Logged in as ' . $userNode->getName().'<br />'.$userNode->getId();
+  echo 'Logged in as ' . $userNode->getName().'<br />';//.$userNode->getId();
   $profile_picture_url='http://graph.facebook.com/'.$userNode->getId().'/picture?type=large';
   $profile_picture='<img src='.$profile_picture_url.' />';
-  echo '<br />'.$profile_picture;
+  //echo '<br />'.$profile_picture;
   
   /* Merging Profile picture and cover photo */
   
@@ -61,8 +61,8 @@ if (isset($accessToken)) {
   $img_dest = imagecreatefrompng('img/test_cover1.png');
   
   /* Below width and height is the total width and height of merged image */
-  $width=500;
-  $height=250;
+  $width=815;
+  $height=315;
 
   /* Make a resize image of specified width and height */
   $img_src_resize = imagecreatetruecolor( $width, $height );
@@ -86,7 +86,7 @@ if (isset($accessToken)) {
   imagepng($img_src_resize,$merged_picture_path);
     
   $data = [
-    'message' => $userNode->getName(). 'submitted vote \nPosted by GECW VIRTUAL ELECTION \n join the revolution @ http://localhost/facebook_app/indexphp.php',
+    'message' => $userNode->getName(). ' Joined the RED REVOLUTION what are you waiting for Join NOW',
     'source' => $fb->fileToUpload($merged_picture_path),
   ];
  
@@ -103,7 +103,9 @@ if (isset($accessToken)) {
 
   $graphNode = $response->getGraphNode();
 
-  echo 'Photo ID: ' . $graphNode['id'];
+  //echo 'Photo ID: ' . $graphNode['id'];
+  
+  echo 'You have successfully joined Digital Revolution';
   
   /* Destroy the image from memory */
   imagedestroy($img_src_or);
