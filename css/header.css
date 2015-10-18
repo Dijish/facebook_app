@@ -1,0 +1,17 @@
+.jumbotron{
+    text-align: center;
+    background: #e74c3c;
+    margin-top: 0px;
+    padding: 20px;
+    height: 100px;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: #ecf0f1;
+}
