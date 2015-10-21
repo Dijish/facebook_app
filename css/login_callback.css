@@ -5,14 +5,15 @@ body{
 .col-md-12{
     text-align: center;
     background: #bdc3c7;
-    height: 50px;
-    padding-top: 20px;
+    height: 30px;
+    padding-top: 10px;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 .col-md-10{
     text-align: center;
     height: 50px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: 'Open Sans Condensed', sans-serif;
 	height:320px;
 }
@@ -46,6 +47,15 @@ input.fb{
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
      font-family: 'Poiret One', cursive;
+}
+
+input[type="text"] {
+  text-align: center;
+  width: 70%;
+  height: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 12pt;
+  margin-top: 0px;
 }
 
 

@@ -69,18 +69,19 @@
             // When Graph returns an error
             /*echo 'Graph returned an error: (using graph) : ' . $e->getMessage();
             exit;*/
-            include 'error.php';
+            //include 'error.php';
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             // When validation fails or other local issues
             //echo 'Facebook SDK returned an error: (using graph) : ' . $e->getMessage();
             //exit;
-              include 'error.php';
+              //include 'error.php';
           }
 
           echo '<div class="row">'
         . '<div class="col-md-12">Join the Red Revolution NOW  ' . $userNode->getName().'<br />'
                   . '</div></div>';
           $profile_picture_url='http://graph.facebook.com/'.$userNode->getId().'/picture?type=large';
+         //echo $userNode->getId();
           $profile_picture='<img src='.$profile_picture_url.' />';
           //echo '<br />'.$profile_picture;
 
@@ -101,13 +102,14 @@
 
           /* Make a resize image of specified width and height */
           $img_src_resize = imagecreatetruecolor( $width, $height );
+          
 
-          /* Copy the profile picture on the right end of reaized image */
+          /* Copy the profile picture on the right end of resized image */
           imagecopyresampled( $img_src_resize, $img_src_or, //dst_image, src_image
-                            100, 0, //Co-ordiante to position image on resized image
+                            500,0, //Co-ordiante to position image on resized image
                             0, 0, //Co-ordiante of resize image to show
-                            imagesx($img_src_resize), imagesy($img_src_resize), //Width and height of resize
-                            imagesx($img_src_or), imagesy($img_src_or) ); //Width and height of src image
+                            315, 315, //Width and height of resize
+                            200, 200 ); //Width and height of src image
 
           /* Copy the cover photo in the left end of resized image containing the profile picture */
           imagecopyresampled( $img_src_resize,$img_dest, //dst_image, src_image
@@ -131,11 +133,11 @@
           } catch(Facebook\Exceptions\FacebookResponseException $e) {
             //echo 'Graph returned an error: ' . $e->getMessage();
             //exit;
-              include 'error.php';
+              //include 'error.php';
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             //echo 'Facebook SDK returned an error: ' . $e->getMessage();
             //exit;
-              include 'error.php';
+             // include 'error.php';
           }
 
           $graphNode = $response->getGraphNode();
@@ -157,10 +159,17 @@
         }
 
         ?>
-        <div class="row">'
+        
+       
+        
+        <div class="row">
              <div class="col-md-4">
+                 Enter the Message
                  <div class="post">
-                     <form action="postImage.php">
+                     <form action="postImage.php" method="GET">
+                         <div class="form-group">
+                              <input type="text" class="form-control" name="msg" id="usr" value="Iam part of the RED REVOLUTION what are you waiting for Join NOW click here  http://54.69.143.54/facebook/facebook_app/">
+                          </div>
                      Show Your Support. Post this Image in your Facebook Timeline<br />
                      <input class="fb" type="submit" value="Post Now" />
                      </form>

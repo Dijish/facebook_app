@@ -27,6 +27,9 @@
         
         $accessToken=$_SESSION['facebook_access_token'];
         
+        $message=$_GET['msg'];
+        //echo $message;
+        
         if (isset($_SESSION['facebook_access_token'])) {
 
           // Now you can redirect to another page and use the
@@ -52,7 +55,7 @@
           $merged_picture_path="img/temp/".$userNode->getName().".png";
           
           $data = [
-            'message' => $userNode->getName(). ' Joined the RED REVOLUTION what are you waiting for Join NOW click here  http://54.69.143.54/facebook/facebook_app/',
+            'message' => $message,
             'source' => $fb->fileToUpload($merged_picture_path),
           ];
           
