@@ -40,12 +40,12 @@
           $accessToken = $helper->getAccessToken();
         } catch(Facebook\Exceptions\FacebookResponseException $e) {
           // When Graph returns an error
-          echo 'Graph returned an error: (accessing token) : ' . $e->getMessage();
+          //echo 'Graph returned an error: (accessing token) : ' . $e->getMessage();
          // $accessToken=$_SESSION['facebook_access_token'];
-          exit;
+         exit;
         } catch(Facebook\Exceptions\FacebookSDKException $e) {
           // When validation fails or other local issues
-          echo 'Facebook SDK returned an error:(accessing token) ' . $e->getMessage();
+         // echo 'Facebook SDK returned an error:(accessing token) ' . $e->getMessage();
           exit;
         }
         }
@@ -67,13 +67,13 @@
           $userNode = $response->getGraphUser();
           } catch(Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
-            /*echo 'Graph returned an error: (using graph) : ' . $e->getMessage();
-            exit;*/
+            /*echo 'Graph returned an error: (using graph) : ' . $e->getMessage();*/
+            exit;
             //include 'error.php';
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             // When validation fails or other local issues
             //echo 'Facebook SDK returned an error: (using graph) : ' . $e->getMessage();
-            //exit;
+            exit;
               //include 'error.php';
           }
 
@@ -132,11 +132,11 @@
             //$response = $fb->post('/me/photos', $data, $accessToken);
           } catch(Facebook\Exceptions\FacebookResponseException $e) {
             //echo 'Graph returned an error: ' . $e->getMessage();
-            //exit;
+            exit;
               //include 'error.php';
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             //echo 'Facebook SDK returned an error: ' . $e->getMessage();
-            //exit;
+            exit;
              // include 'error.php';
           }
 
@@ -155,6 +155,8 @@
           imagedestroy($img_src_resize);
 
           /* Delete saved cover photo to save memory */
+          
+         
 
         }
 

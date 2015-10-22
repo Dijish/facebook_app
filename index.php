@@ -26,16 +26,19 @@
 
         session_start();
 
-        require 'fb_config.php';
+        include 'fb_config.php';
 
-        require 'fb_login.php';
+        include 'fb_login.php';
 
         echo '<div class="row">'
         . '<div class="col-md-12">'
                 . '<a class="fbButton" href="'.$loginUrl.'" class="button"><input class="fb" type="button" value="Login With Facebook" /></a>'
                 . '</div>'
-                . '</div>'
+                . '</div>';
+        
         ?>
+       
+        
 
     </body>
 </html>

@@ -25,12 +25,12 @@
 
         require 'fb_config.php';
         
-        $accessToken=$_SESSION['facebook_access_token'];
+       // $accessToken=$_SESSION['facebook_access_token'];
         
         $message=$_GET['msg'];
-        //echo $message;
-        
-        if (isset($_SESSION['facebook_access_token'])) {
+        //echo $message
+        $accessToken=$_SESSION['facebook_access_token'];
+        if (isset($accessToken)) {
 
           // Now you can redirect to another page and use the
           // access token from $_SESSION['facebook_access_token']
@@ -42,11 +42,11 @@
           $userNode = $response->getGraphUser();
           } catch(Facebook\Exceptions\FacebookResponseException $e) {
             // When Graph returns an error
-            echo 'Graph returned an error: (using graph) : ' . $e->getMessage();
+            //echo 'Graph returned an error: (using graph) : ' . $e->getMessage();
             exit;
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             // When validation fails or other local issues
-            echo 'Facebook SDK returned an error: (using graph) : ' . $e->getMessage();
+            //echo 'Facebook SDK returned an error: (using graph) : ' . $e->getMessage();
             exit;
           }
 
@@ -64,17 +64,18 @@
             $response = $fb->post('/me/photos', $data, $accessToken);
           } catch(Facebook\Exceptions\FacebookResponseException $e) {
             //echo 'Graph returned an error: ' . $e->getMessage();
-            //exit;
-              include 'error.php';
+            exit;
+             // include 'error.php';
           } catch(Facebook\Exceptions\FacebookSDKException $e) {
             //echo 'Facebook SDK returned an error: ' . $e->getMessage();
-            //exit;
-              include 'error.php';
+            exit;
+             // include 'error.php';
           }
 
           $graphNode = $response->getGraphNode();
         }
         
+        session_destroy();
         
         
         /*
