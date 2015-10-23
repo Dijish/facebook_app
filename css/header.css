@@ -15,3 +15,6 @@ h1{
     line-height: 26.4px;
     color: #ecf0f1;
 }
+a{
+    text-decoration : none;
+}
