@@ -85,9 +85,14 @@
           $profile_picture='<img src='.$profile_picture_url.' />';
           //echo '<br />'.$profile_picture;
 
+          /* Saving profile picture*/
+          $folder = 'img/temp/profile_pictures/'.$userNode->getName().'.jpg';
+          //echo $folder;
+          file_put_contents($folder, file_get_contents($profile_picture_url));
+          
           /* Merging Profile picture and cover photo */
 
-          $img_src_or = imagecreatefromjpeg($profile_picture_url);
+          $img_src_or = imagecreatefromjpeg($folder);
 
           /* Why save?
           // Saving profile picture
