@@ -75,7 +75,7 @@
           $graphNode = $response->getGraphNode();
         }
         
-        session_destroy();
+
         
         
         /*
