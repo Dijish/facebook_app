@@ -30,7 +30,7 @@
             // Destroy the facebook session
             session_destroy();
        
-            header("Location: http://localhost/facebook_app/"); 
+            header("Location: http://52.32.229.201/facebook_app/"); 
             exit();
         }
 ?>

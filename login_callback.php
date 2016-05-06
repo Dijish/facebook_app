@@ -179,7 +179,7 @@
                  <div class="post">
                      <form action="postImage.php" method="GET">
                          <div class="form-group">
-                              <input type="text" class="form-control" name="msg" id="usr" value="Vote For LDF   .     Show your support   Click Here   http://54.69.143.54/facebook_app/">
+                              <input type="text" class="form-control" name="msg" id="usr" value="Vote For LDF   .     Show your support   Click Here   http://52.32.229.201/facebook_app/">
                           </div>
                      Show Your Support. Post this Image in your Facebook Timeline<br />
                      <input class="fb" type="submit" value="Post Now" />
