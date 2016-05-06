@@ -17,7 +17,7 @@
         
        // $accessToken=$_SESSION['facebook_access_token'];
         
-        $message=$_GET['msg'];
+       // $message=$_GET['msg'];
         //echo $message
         $accessToken=$_SESSION['facebook_access_token'];
         if (isset($accessToken)) {
@@ -30,7 +30,7 @@
             // Destroy the facebook session
             session_destroy();
        
-            header("Location: http://54.69.143.54/facebook_app/"); 
+            header("Location: http://localhost/facebook_app/"); 
             exit();
         }
 ?>

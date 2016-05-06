@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
         <title>Join Red Tomorrow</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
         <link rel="stylesheet" type="text/css" href="css/header.css" />
         <link rel="stylesheet" type="text/css" href="css/login_callback.css" />
         
@@ -177,7 +179,7 @@
                  <div class="post">
                      <form action="postImage.php" method="GET">
                          <div class="form-group">
-                              <input type="text" class="form-control" name="msg" id="usr" value="Iam part of the RED REVOLUTION what are you waiting for Join NOW click here  http://54.69.143.54/facebook_app/">
+                              <input type="text" class="form-control" name="msg" id="usr" value="Vote For LDF   .     Show your support   Click Here   http://54.69.143.54/facebook_app/">
                           </div>
                      Show Your Support. Post this Image in your Facebook Timeline<br />
                      <input class="fb" type="submit" value="Post Now" />
